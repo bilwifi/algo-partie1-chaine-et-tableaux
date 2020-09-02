@@ -11,6 +11,27 @@
 //   anagrams('mbote! NABINO!', 'mbote nabino') --> True
 //   anagrams('Salut KDA', 'salUt Kda!') --> True
 
-function anagrams(stringA, stringB) {}
+function anagrams(stringA, stringB) {
+  if (stringA.length !== stringB.length) return false;
+  for (const char of stringA.split("")) {
+    if (!stringB.includes(char)) return false;
+    if (
+      compterNombreCaractere(char, stringA) !==
+      compterNombreCaractere(char, stringB)
+    )
+      return false;
+  }
+  return true;
+}
+function compterNombreCaractere(char, sentence) {
+  let nbr = 0;
+  if (!sentence.includes(char)) return nbr;
+  for (const el of sentence.split("")) {
+    if (el === char) {
+      nbr++;
+    }
+  }
+  return nbr;
+}
 
 module.exports = anagrams;

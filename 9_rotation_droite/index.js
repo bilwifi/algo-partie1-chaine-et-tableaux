@@ -10,6 +10,11 @@
 // rotateRight([1,2,3,4,5],3) => [3,4,5,1,2]
 // rotateRight([1,2,3,4,5],4) => [2,3,4,5,1]
 
-function rotateRight(arr, numberOfRotations) {}
+function rotateRight(arr, numberOfRotations) {
+    for (let i = 1; i <= numberOfRotations; i++) {
+        arr.unshift(arr.pop());
+      }
+      return arr;
+}
 
 module.exports = rotateRight;

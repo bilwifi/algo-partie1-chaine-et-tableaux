@@ -6,6 +6,16 @@
 //   reverse('thesy') === 'yseht'
 //   reverse('Bonjour!') === '!ruojnoB'
 
-function reverse(str) {}
+// function reverse(str) {
+//     return str.split('').reverse().join('');
+// }
+
+function reverse(str) {
+    const chaineReverse = [];
+    for (const char of str.split('')) {
+        chaineReverse.unshift(char);
+    }
+    return chaineReverse.join('');
+}
 
 module.exports = reverse;

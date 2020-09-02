@@ -8,6 +8,14 @@
 //   capitalize('l'homme de la montagne') --> 'L'homme De La Montagne'
 //   capitalize('il faut faire très attention') --> 'Il Faut Faire Très Attention'
 
-function capitalize(str) {}
+function capitalize(str) {
+  let strCapitalize = "";
+  for (const subStr of str.split(" ")) {
+    let strSplit = subStr.split("");
+    strSplit[0]= strSplit[0].toUpperCase();
+    strCapitalize += strSplit.join("") + " ";
+  }
+  return strCapitalize.trim();
+}
 
 module.exports = capitalize;

@@ -28,6 +28,40 @@
 // 15 % 5 === 0 : Si la reponse est 0 alors, 15 est multiple car
 // Le reste de la division entière de 15 par 5 donne 0.
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+  let i = 1;
+  while (i <= n) {
+    logFizzBuzz(i);
+    i++;
+  }
+}
+
+function logFizzBuzz(n) {
+  let str = "";
+  if (n % 3 === 0 && n % 5 === 0) {
+    str = "fizzbuzz";
+  } else if (n % 3 === 0) {
+    str = "fizz";
+  } else if (n % 5 === 0) {
+    str = "buzz";
+  } else {
+    str = n;
+  }
+  return console.log(str);
+}
+
+// function fizzBuzz(n) {
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log("fizzbuzz");
+//     } else if (i % 3 === 0) {
+//       console.log("fizz");
+//     } else if (i % 5 === 0) {
+//       console.log("buzz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
 
 module.exports = fizzBuzz;
